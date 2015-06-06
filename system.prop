@@ -3,3 +3,9 @@
 #
 
 ro.sf.lcd_density=240
+ro.product.device=taoshan
+ro.product.model=C2105
+
+# System props for audio
+persist.audio.fluence.mode=false
+persist.audio.handset.mic=analog
