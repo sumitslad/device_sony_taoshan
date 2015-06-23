@@ -14,9 +14,8 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, vendor/sony/taoshan/taoshan-vendor.mk)
 $(call inherit-product, device/sony/common/resources.mk)
-$(call inherit-product, device/sony/msm8960-common/msm8960.mk)
+$(call inherit-product-if-exists, device/sony/msm8960-common/msm8960.mk)
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
@@ -160,13 +159,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     setup_fs \
     e2fsck
-
-# FM radio
-PRODUCT_PACKAGES += \
-	qcom.fmradio \
-	libqcomfm_jni \
-	FM2 \
-	FMRecord
 
 # GPS-1
 PRODUCT_PACKAGES += \
