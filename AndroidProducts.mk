@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/taoshan.mk
+    $(LOCAL_DIR)/aosp_taoshan.mk
